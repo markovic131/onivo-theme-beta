@@ -1,0 +1,19 @@
+#responsive {
+
+    img {
+        width: 100%;
+        @media (max-width: $screen-md-min) {
+            margin-bottom: 30px;
+        }
+    }
+
+    #browsersMatrix {
+        padding-top: 10px;
+        @media (max-width: $screen-md-min) {
+            text-align: center;
+        }
+        span.sic {
+            margin-right: 10px;
+        }
+    }
+}

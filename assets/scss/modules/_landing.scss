@@ -1,0 +1,50 @@
+#landing {
+
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover !important;
+    color: #fff;
+
+    @media (min-width: $screen-md-min) {
+        padding: 90px 0;
+        // #opaqueBackground {
+        //     background-color: #000;
+        //     position: absolute;
+        //     //z-index: -1;
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100%;
+        //     @include opacity(0.6);
+        // }
+    }
+    @media (max-width: $screen-md-min) {
+        padding: 60px 0;
+        // #opaqueBackground {
+        //     background-color: #000;
+        //     position: absolute;
+        //     //z-index: -1;
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100%;
+        //     @include opacity(0.6);
+        // }
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 56px;
+        text-shadow: 1px 2px 3px #333;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+    .btnRegister {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        padding: 20px 45px;
+    }
+}

@@ -1,0 +1,23 @@
+{% set post_image = child.media.images|first %}
+
+<div class="post-preview">
+    <a href="{{ page.url }}">
+        <h2 class="post-title">
+            {{ page.title }}
+        </h2>
+        {% if page.subtitle %}
+            <h3 class="post-subtitle">
+                {{ page.subtitle }}
+            </h3>
+        {% else %}
+            <h3 class="post-subtitle">
+                {{ page.summary|truncate(100) }}
+            </h3>
+        {% endif %}
+        {{ post_image.cropZoom(660, 220).html('','','img-responsive') }}
+        <br>
+        <p class="post-meta">
+            Објавено на {{ page.date|date('d.m.Y') }} од {{ page.header.author }}
+        </p>
+    </a>
+</div>

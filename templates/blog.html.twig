@@ -1,0 +1,50 @@
+{% embed 'partials/base.html.twig' %}
+
+{% set collection = page.collection() %}
+
+{% block content %}
+
+{% set blog_image = page.media.images|first.contrast(30).brightness(-50) %}
+<header class="intro-header"  style="background-image: url({{ blog_image.url }});">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="site-heading">
+					<h1>Onivo Блог</h1>
+					<hr class="small">
+					<span class="subheading">Дневна доза на бизнис едукација и забава!</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<section>
+	<div class="container">
+			<!-- {% if config.plugins.breadcrumbs.enabled %}
+				{% include 'partials/breadcrumbs.html.twig' %}
+			{% endif %} -->
+
+			<div class="row">
+				<div class="col-md-8 col-lg-8">
+					{% for child in collection %}
+				        <div class="row">
+				        	<div class="col-lg-12 col-md-12">
+				        		{% include 'partials/post_preview.html.twig' with {'blog':page, 'page':child} %}
+				        	</div>
+				        </div>
+						<hr>
+				    {% endfor %}
+
+			        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+			            {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+			        {% endif %}
+				</div>
+				<div class="col-md-4">
+					{% include 'partials/sidebar.html.twig' with {'blog':page} %}
+				</div>
+			</div>
+	</div>
+</section>
+{% endblock %}
+
+{% endembed %}

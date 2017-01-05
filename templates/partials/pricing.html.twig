@@ -1,0 +1,156 @@
+<div class="container" id="pricing">
+    <section>
+        <h1 class="text-center">Флексибилни цени за врвни пакети!</h1>
+        <p class="lead text-center">
+            Onivo е засекогаш БЕСПЛАТЕН, но доколку имате потреба од посложени и побројни функционалности, Ви нудиме платени пакети по најпристапни цени.
+        </p>
+        {# <div class="row">
+            <div class="col-md-12">
+            </div>
+        </div> #}
+        <br>
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-default plan">
+                    <div class="panel-heading">
+                        <h3>Основен</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li>10 Клиенти</li>
+                            <li>25 Артикли</li>
+                            <li><span class="emp">Неограничени</span> Документи</li>
+                            <li>1 Корисник</li>
+                            <li>1 Банкарска сметка</li>
+                            <li>Домашна валута и јазик</li>
+                            <li><strong>Магацинско работење</strong></li>
+                            <li><strong>Малопродажбa</strong></li>
+                            <li><span class="emp">Премиум</span> Поддршка</li>
+                            <li>Onivo Брендинг</li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>
+                            {# <span class="priceOnDiscount">0</span><br> #}
+                            <span>0</span>
+                        </h3>
+                        <p>
+                            <span class="interval">месечно</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-primary plan plan-popular">
+                    <div class="panel-heading">
+                        <h3>Класик</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li>100 Клиенти</li>
+                            <li>250 Артикли</li>
+                            <li><span class="emp">Неограничени</span> Документи</li>
+                            <li>3 Корисници</li>
+                            <li>2 Банкарски сметки</li>
+                            <li>Странски валути и јазици</li>
+                            <li><strong>Магацинско работење</strong></li>
+                            <li><strong>Малопродажбa</strong></li>
+                            <li><span class="emp">Премиум</span> Поддршка</li>
+                            <li>Изборен Onivo Брендинг</li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>
+                            {# <span id="classicOldPrice" class="priceOnDiscount">399</span><br> #}
+                            <span id="classicPrice">399</span>
+                        </h3>
+                        <p>
+                            <span class="interval">месечно</span>
+                        </p>
+                        {# <p class="text-danger interval6 hidden">
+                            +1 месец ГРАТИС
+                        </p>
+                        <p class="text-danger interval12 hidden">
+                            +3 месеци ГРАТИС
+                        </p> #}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="panel panel-danger plan">
+                    <div class="panel-heading">
+                        <h3>Премиум</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled">
+                            <li><span class="emp">Неограничени</span> Клиенти</li>
+                            <li><span class="emp">Неограничени</span> Артикли</li>
+                            <li><span class="emp">Неограничени</span> Документи</li>
+                            <li>10 Корисници</li>
+                            <li>3 Банкарски сметки</li>
+                            <li>Странски валути и јазици</li>
+                            <li><strong>Магацинско работење</strong></li>
+                            <li><strong>Малопродажбa</strong></li>
+                            <li><span class="emp">Премиум</span> Поддршка</li>
+                            <li>Изборен Onivo Брендинг</li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        <h3>
+                            {# <span id="premiumOldPrice" class="priceOnDiscount">899</span><br> #}
+                            <span id="premiumPrice">899</span>
+                        </h3>
+                        <p>
+                            <span class="interval">месечно</span>
+                        </p>
+                        {# <p class="text-danger interval6 hidden">
+                            +1 месец ГРАТИС
+                        </p>
+                        <p class="text-danger interval12 hidden">
+                            +3 месеци ГРАТИС
+                        </p> #}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-left">
+                <p>
+                    <b><i class="fa fa-info-circle fa-fw"></i> БЕЗ скриени трошоци!</b><br>
+                    Onivo <em>никогаш</em> не наплаќа месечни или годишни одржувања.<br>
+                    Користете го колку сакате и кога сакате.
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <p class="text-muted text-right">
+                    <small>* Платените пакети се купуваат во периоди од 3, 6 или 12 месеци.</small><br>
+                    <small>** Цените се изразени во MKD <b>со вклучен ДДВ</b> од 18%.</small>
+                    <!-- <small class="text-danger text-right hidden" id="promoOfferHelp"><br>
+                        <b>*** Промотивната понуда важи до 29.02.2016.</b>
+                    </small> -->
+                </p>
+                <select name="interval" class="form-control" id="interval">
+                    <option value="">Избери период</option>
+                    <option value="3">3 месеци</option>
+                    <option value="6">6 месеци</option>
+                    <option value="12">12 месеци</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row" id="giveMeMyAccount">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <a href="https://app.onivo.mk/register" class="btn btn-primary btn-lg btn-block">
+                    <div class="hidden-sm hidden-xs">Регистрирај го својот <strong>БЕСПЛАТЕН</strong> профил!</div>
+                    <div class="hidden-md hidden-lg">Регистрирај го својот<br> <strong>БЕСПЛАТЕН</strong> профил!</div>
+                </a>
+                <p style="margin-top:15px;" class="text-center">
+                    <i class="fa fa-info-circle fa-fw"></i> Без комплицирани инсталации, без месечни одржувања, без скапи сервери!
+                </p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,17 @@
+{
+  "name": "onivo-theme-beta",
+  "description": "Onivo Website Theme Beta",
+  "homepage": "https://github.com/psybaron/onivo-theme-beta",
+  "version": "1.0.0",
+  "author": {
+    "name": "Marko Aleksic",
+    "url": "https://markoaleksic.com"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.2"
+  }
+}

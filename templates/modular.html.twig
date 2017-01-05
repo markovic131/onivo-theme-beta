@@ -1,0 +1,25 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
+{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+
+{% block bottom %}
+    {{ parent() }}
+{% endblock %}
+
+{% block header_navigation %}
+    {{  parent() }}
+{% endblock %}
+
+{% block content %}
+    {{ page.content }}
+    {% for module in page.collection() %}
+        <div id="{{ _self.pageLinkName(module.menu) }}"></div>
+        {{ module.content }}
+    {% endfor %}
+{% endblock %}

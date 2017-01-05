@@ -1,0 +1,12 @@
+{% set taxlist = taxonomylist.get() %}
+
+{% if taxlist %}
+    <div class="post-tags">
+    {% for tax,value in taxlist[taxonomy] %}
+        <a class="{{ active }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">
+            {% set active = uri.param(taxonomy) == tax ? 'active' : '' %}
+            {{ tax }}
+        </a>
+    {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,14 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div class="container" id="legal">
+        <section>
+            <div class="row">
+                <div class="col-md-10">
+                    {{ page.content }}
+                </div>
+            </div>
+            {% include 'partials/address.html.twig' %}
+        </section>
+    </div>
+{% endblock %}

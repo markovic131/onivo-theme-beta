@@ -1,0 +1,29 @@
+/**
+ * Features Section
+ */
+#features {
+
+    .iconHolder {
+        text-align: center;
+    }
+
+    .featureIcon {
+
+    }
+    .feature {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    section {
+
+        & > .row {
+            padding-bottom: 50px;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+}

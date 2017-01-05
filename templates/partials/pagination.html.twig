@@ -1,0 +1,29 @@
+{% if pagination|length > 1 %}
+<nav>
+    <ul class="pager">
+        {% if pagination.hasPrev %}
+            {% set url =  (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
+            <li class="previous"><a rel="prev" href="{{ url }}"><i class="fa fa-chevron-left fa-fw"></i> Понови Постови</a></li>
+        {% endif %}
+
+        <!-- {% for paginate in pagination %}
+
+            {% if paginate.isCurrent %}
+                <li><span>{{ paginate.number }}</span></li>
+            {% elseif paginate.isInDelta %}
+                {% set url =  (base_url ~ pagination.params ~ paginate.url)|replace({'//':'/'}) %}
+                <li><a href="{{ url }}">{{ paginate.number }}</a></li>
+            {% elseif paginate.isDeltaBorder %}
+                <li class="gap"><span>&hellip;</span></li>
+            {% endif %}
+
+        {% endfor %} -->
+
+        {% if pagination.hasNext %}
+            {% set url =  (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
+            <li class="next"><a rel="next" href="{{ url }}">Постари Постови <i class="fa fa-chevron-right fa-fw"></i></a></li>
+        {% endif %}
+    </ul>
+    <hr>
+</nav>
+{% endif %}

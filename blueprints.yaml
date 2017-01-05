@@ -1,0 +1,22 @@
+name: Beta
+version: 1.0.0
+description: "Onivo Beta Theme"
+icon: empire
+author:
+  name: MarkoAleksic
+  email: iam@markoaleksic.com
+  url: http://markoaleksic.com
+homepage: http://markoaleksic.com
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool

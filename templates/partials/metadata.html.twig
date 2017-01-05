@@ -1,0 +1,11 @@
+{# {% for meta in page.metadata %}
+<meta {% if meta.name %}name="{{ meta.name }}" {% endif %}{% if meta.http_equiv %}http-equiv="{{ meta.http_equiv }}" {% endif %}{% if meta.charset %}charset="{{ meta.charset }}" {% endif %}{% if meta.property %}property="{{ meta.property }}" {% endif %}{% if meta.content %}content="{{ meta.content }}" {% endif %}/>
+{% endfor %} #}
+
+<meta property="og:site_name" content="Onivo" />
+<meta property="og:type" content="{{ header.author ? 'article' : 'website' }}" />
+<meta property="og:title" content="{{ header.title }}" />
+<meta property="og:locale" content="mk_MK" />
+<meta property="og:description" content="{{ header.title }} - {{ header.description ? header.description : site.metadata.description }}" />
+<meta property="og:url" content="{{ uri.url(true) }}" />
+<meta property="fb:admins" content="{{ site.onv.fb.admin_id }}" />

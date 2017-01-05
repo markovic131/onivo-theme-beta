@@ -1,0 +1,371 @@
+body {
+    padding-top: 80px !important;
+}
+
+nav {
+
+    font-size: 12px;
+    @include opacity(0.90);
+
+    .navbar-brand {
+        font-weight: bold;
+        //color: #333 !important;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        // img {
+        //     height: 50px;
+        //     @include opacity(0.88);
+        // }
+    }
+
+    #navigation {
+
+        text-transform: uppercase;
+        a {
+            //color: #333;
+            font-weight: bold;
+        }
+
+        & > li.active a {
+            padding-top: 27px;
+            background-color: transparent;
+            color: $navbar-default-link-hover-color;
+            border-top: 3px solid $brand-primary;
+        }
+        & > li.login a {
+            font-weight: bold;
+            color: $brand-primary;
+
+        }
+
+        // & > li.login > a > span {
+        //     display: block;
+        //     padding: 0 5px;
+        //     outline: 1px solid $brand-primary;
+        // }
+        li.divider {
+            margin: 0 5px;
+            height: 80px;
+            border-left: 1px solid lighten($brand-primary, 15%);
+            border-right: 1px solid lighten($brand-primary, 25%);
+        }
+    }
+}
+
+// .intro-header {
+//     background-color: gray;
+//     background: no-repeat center center;
+//     background-attachment: scroll;
+//     background-size: cover;
+//     margin-bottom: 50px;
+//     .site-heading {
+//         text-align: center;
+//     }
+// }
+
+.intro-header {
+	background-color: $gray;
+	background: no-repeat center center;
+	background-attachment: scroll;
+	margin-bottom: 50px;
+	.site-heading,
+	.post-heading,
+	.page-heading {
+		padding: 100px 0 50px;
+		color: white;
+		@media only screen and (min-width: 768px) {
+			padding: 150px 0;
+		}
+	}
+	.site-heading,
+	.page-heading {
+		text-align: center;
+		h1 {
+			margin-top: 0;
+			font-size: 50px;
+		}
+		.subheading {
+			font-size: 24px;
+			line-height: 1.1;
+			display: block;
+			font-weight: 300;
+			margin: 10px 0 0;
+		}
+		@media only screen and (min-width: 768px) {
+			h1 {
+				font-size: 80px;
+			}
+		}
+	}
+	.post-heading {
+		h1 {
+			font-size: 35px;
+		}
+		.subheading,
+		.meta {
+			line-height: 1.1;
+			display: block;
+		}
+		.subheading {
+			font-size: 24px;
+			margin: 10px 0 30px;
+			font-weight: 700;
+		}
+		.meta {
+			font-style: italic;
+			font-weight: 300;
+			font-size: 20px;
+			a {
+				color: white;
+			}
+		}
+		@media only screen and (min-width: 768px) {
+			h1 {
+				font-size: 55px;
+			}
+			.subheading {
+				font-size: 30px;
+			}
+		}
+	}
+}
+
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form  {
+    background-color: #fff;
+}
+
+footer {
+
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: #e1e1e1;
+    background-color: $gray-dark;
+    box-shadow: inset 1px 5px 5px #333;
+    border-top: 1px solid darken($gray-dark, 5%);
+
+    hr {
+        border-top: 1px solid darken($gray-dark, 5%);
+        border-bottom: 1px solid lighten($gray-dark, 5%);
+    }
+
+    h3 {
+        margin: 0;
+        margin-bottom: 25px;
+        text-shadow: 1px 3px 3px #333;
+    }
+
+    #followUs {
+        @media (min-width: $screen-md-min) {
+            text-align: left;
+        }
+        @media (max-width: $screen-md-min) {
+            text-align: center;
+        }
+        #social {
+            margin-bottom: 25px;
+            a {
+                color: #fff;
+                margin-right: 7px;
+                text-shadow: 1px 3px 3px #333;
+                &:hover {
+                    color: #ccc !important;
+                    text-decoration: none;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    #aboutOnivo {
+        @media (min-width: $screen-md-min) {
+            text-align: left;
+        }
+        @media (max-width: $screen-md-min) {
+            text-align: center;
+        }
+    }
+
+    #contact {
+        @media (min-width: $screen-md-min) {
+            text-align: right;
+        }
+        @media (max-width: $screen-md-min) {
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+            //font-weight: bold;
+        }
+    }
+
+    #madeWithLove {
+        padding-top: 30px;
+        p {
+            //font-size: 10px;
+            text-transform: uppercase;
+        }
+    }
+
+    #copyright {
+        padding-top: 30px;
+        //text-align: center;
+        text-transform: uppercase;
+        div:first-child {
+            @media (min-width: $screen-md-min) {
+                text-align: left;
+            }
+            @media (max-width: $screen-md-min) {
+                text-align: center;
+            }
+        }
+        div:last-child {
+            @media (min-width: $screen-md-min) {
+                text-align: right;
+            }
+            @media (max-width: $screen-md-min) {
+                text-align: center;
+            }
+        }
+        a {
+            color: #fff;
+            &:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.container {
+
+    max-width: 980px;
+
+    & > section {
+
+        @media (min-width: $screen-md-min) {
+            padding: 100px 0;
+        }
+        @media (max-width: $screen-md-min) {
+            padding: 40px 0;
+        }
+
+        & > h1 {
+            margin: 0;
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.wrapper {
+
+    &.gray {
+        color: #fff;
+        background-color: #323d43;
+        box-shadow: 0 2px 3px #ccc;
+    }
+
+    &.lightGray {
+        background-color: #d3d3d3;
+
+        h3 {
+            font-size: 20px;
+            color: #686864;
+            text-shadow: 0 2px 0 #efefec;
+        }
+    }
+
+}
+
+nav.navbar.scrolled {
+    min-height: 50px !important;
+    height: 50px !important;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+}
+
+nav.scrolled {
+    li {
+        a {
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+            transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+        }
+        &.active {
+            a {
+                padding-top: 12px !important;
+                transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+            }
+        }
+    }
+    .navbar-brand {
+        height: 50px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+        img {
+            height: 30px !important;
+            width: 76px !important;
+            transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+        }
+    }
+    .navbar-toggle {
+        padding: 8px 10px !important;
+        margin: 9px 15px 9px 0 !important;
+        transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+    }
+}
+
+/* MailChimp Form Embed Code - Slim - 08/17/2011 */
+#mc_embed_signup form {display:block; position:relative; text-align:left; padding:10px 0 10px 3%}
+#mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
+#mc_embed_signup input {border:1px solid #999; -webkit-appearance:none;}
+#mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
+#mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
+#mc_embed_signup input:focus {border-color:#333;}
+#mc_embed_signup .button {clear:both; background-color: #aaa; border: 0 none; border-radius:4px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: bold; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding:0; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
+#mc_embed_signup .button:hover {background-color:#777;}
+#mc_embed_signup .small-meta {font-size: 11px;}
+#mc_embed_signup .nowrap {white-space:nowrap;}
+#mc_embed_signup .clear {clear:none; display:inline;}
+
+#mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
+#mc_embed_signup input.email {display:block; padding:8px 0; margin:0 4% 10px 0; text-indent:5px; width:58%; min-width:130px;}
+#mc_embed_signup input.button {display:block; width:35%; margin:0 0 10px 0; min-width:90px;}
+
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+
+#mc_embed_signup form {text-align: right !important; padding: 0 !important;}
+
+
+// @import "sic/*.png";
+// .sic {
+//     display: inline-block;
+//     height: 32px;
+//     width: 32px;
+//
+//     margin-right: 5px;
+//     &:last-child {
+//         margin-right: 0;
+//     }
+// }
+// @include all-sic-sprites;

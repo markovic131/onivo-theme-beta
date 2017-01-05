@@ -1,0 +1,23 @@
+{
+    "name": "psybaron/onivo-theme-beta",
+    "type": "onivo-theme",
+    "description": "Onivo Beta is the first Onivo website theme",
+    "homepage": "http://onivo.rs",
+    "authors": [
+        {
+            "name": "Marko Aleksic",
+            "email": "iam@markoaleksic.com",
+            "homepage": "http://markoaleksic.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "installer-name": "beta",
+        "installer-paths": {
+            "user/themes/{$name}/": ["psybaron/onivo-theme-beta"]
+        }
+    }
+}
