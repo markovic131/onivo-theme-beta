@@ -3,17 +3,17 @@
 
 {% if config.plugins.simplesearch.enabled %}
 <div class="sidebar-content">
-    <h4>Пребарување</h4>
+    <h4>Pretraživanje</h4>
     {% include 'partials/simplesearch_searchbox.html.twig' %}
 </div>
 {% endif %}
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
-    <h4>Релевантни Статии</h4>
+    <h4>Relevantni članci</h4>
     {% include 'partials/relatedpages.html.twig' %}
 {% endif %}
 {% if config.plugins.random.enabled %}
 <div class="sidebar-content">
-	<h4>Рандом Статија</h4>
+	<h4>Slučajni članci</h4>
 	<a class="button" href="{{ base_url }}/random"><i class="fa fa-retweet"></i> I'm Feeling Lucky!</a>
 </div>
 {% endif %}
@@ -25,7 +25,7 @@
 {% endif %}
 {% if config.plugins.archives.enabled %}
 <div class="sidebar-content">
-    <h4>Архива</h4>
+    <h4>Arhiva</h4>
 	{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
 </div>
 {% endif %}

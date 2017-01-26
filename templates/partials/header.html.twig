@@ -13,11 +13,12 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right" id="navigation">
                 {% for page in pages.children %}
-                {% if page.visible %}
-                {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-                <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
-                {% endif %}
+                    {% if page.visible %}
+                        {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                        <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+                    {% endif %}
                 {% endfor %}
+                <li class=""><a href="https://app.onivo.rs">Ulaz</a></li>
             </ul>
         </div>
     </div>
