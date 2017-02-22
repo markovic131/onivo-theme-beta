@@ -13,11 +13,14 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right" id="navigation">
                 {% for page in pages.children %}
-                {% if page.visible %}
-                {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-                <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
-                {% endif %}
+                    {% if page.visible %}
+                        {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                        <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+                    {% endif %}
                 {% endfor %}
+                <li id="divider" class="dividerVertical"></li>
+                <li class="registerLink"><a href="https://app.onivo.rs/register">Registracija</a></li>
+                <li class="loginLink"><a href="https://app.onivo.rs">Prijava</a></li>
             </ul>
         </div>
     </div>

@@ -208,25 +208,27 @@ function scrollHeader() {
     // Has scrolled class on header
     if ($(document).scrollTop() > 80) {
         $("nav").addClass("scrolled");
+        $("#divider").removeClass("dividerVertical").addClass("dividerVertical60");
     } else {
         $("nav").removeClass("scrolled");
+        $("#divider").removeClass("dividerVertical60").addClass("dividerVertical");
     }
 }
 
 function showPricesForInterval (interval) {
     // var classicOldUnitPrice = 399,
     //     premiumOldUnitPrice = 899;
-    var classicUnitPrice = 399,
-        premiumUnitPrice = 899;
+    var classicUnitPrice = 699,
+        premiumUnitPrice = 1499;
 
     if(interval) {
-        $('.interval').html(interval + ' месеци');
+        $('.interval').html(interval + ' meseca');
         $('#classicPrice').html(classicUnitPrice * interval);
         $('#premiumPrice').html(premiumUnitPrice * interval);
         // $('#classicOldPrice').html(classicOldUnitPrice * interval);
         // $('#premiumOldPrice').html(premiumOldUnitPrice * interval);
     } else {
-        $('.interval').html('месечно');
+        $('.interval').html('mesečno');
         $('#classicPrice').html(classicUnitPrice);
         $('#premiumPrice').html(premiumUnitPrice);
         // $('#classicOldPrice').html(classicOldUnitPrice);
