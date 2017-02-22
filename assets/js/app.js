@@ -208,8 +208,10 @@ function scrollHeader() {
     // Has scrolled class on header
     if ($(document).scrollTop() > 80) {
         $("nav").addClass("scrolled");
+        $("#divider").removeClass("dividerVertical").addClass("dividerVertical60");
     } else {
         $("nav").removeClass("scrolled");
+        $("#divider").removeClass("dividerVertical60").addClass("dividerVertical");
     }
 }
 
