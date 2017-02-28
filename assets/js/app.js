@@ -216,13 +216,16 @@ function scrollHeader() {
 }
 
 function showPricesForInterval (interval) {
-    // var classicOldUnitPrice = 399,
-    //     premiumOldUnitPrice = 899;
+
     var classicUnitPrice = 699,
         premiumUnitPrice = 1499;
 
     if(interval) {
-        $('.interval').html(interval + ' meseca');
+        if(interval == 3) {
+            $('.interval').html(interval + ' meseca');
+        } else {
+            $('.interval').html(interval + ' meseci');
+        }
         $('#classicPrice').html(classicUnitPrice * interval);
         $('#premiumPrice').html(premiumUnitPrice * interval);
         // $('#classicOldPrice').html(classicOldUnitPrice * interval);
