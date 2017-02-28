@@ -1,14 +1,14 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    {# {% set showcase_image = page.media.images|first.grayscale().contrast(20).brightness(-125).colorize(-35,81,122) %} #}
-    {% set showcase_image = page.media[header.landing.image].contrast(20).brightness(-110).colorize(55,55,55) %}
+    {% set showcase_image = page.media.images|first.contrast(35).brightness(-110).colorize(50,50,50) %}
+    {# {% set showcase_image = page.media[header.landing.image].contrast(20).brightness(-110).colorize(55,55,55) %}  #}
     <section id="landing" style="background-image: url({{ showcase_image.url }});">
         <div class="container">
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10 text-center">
-                    <h1>Onivo je idealno rešenje za potrebe Vašeg biznisa.</h1>
+                    <h1>Onivo je idealno rešenje za potrebe Vašeg biznisa</h1>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="row" id="visitFaq">
                     <div class="col-md-12">
-                        <h3><i class="fa fa-question-circle"></i> Imate još pitanja u vezi sa Onivo?</h3>
+                        <h3><i class="fa fa-question-circle"></i> Imate još pitanja u vezi sa Onivom?</h3>
                         <p>
                             Saznajte više na stranici <a href="/faq"><strong>„Često postavljana pitanja“  &rarr;</strong></a>
                         </p>
