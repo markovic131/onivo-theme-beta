@@ -35,7 +35,7 @@
             <h1> {{ page.title }} </h1>
             {% if header_image %}
             <p>
-                <small>Објавено од {{ page.header.author }} на {{ page.date|date('d.m.Y') }}</small>
+                <small>Objavljeno na {{ page.date|date('d.m.Y') }} / {{ page.header.author }}</small>
             </p>
                 {% if header_image_file %}
                     {% set header_image_media = page.media.images[header_image_file] %}
@@ -82,12 +82,12 @@
             <ul class="pager">
                 {% if not page.isFirst %}
                     <li class="previous">
-                        <a class="button" href="{{ page.nextSibling.url }}"><i class="fa fa-chevron-left fa-fw"></i> Следна Статија</a>
+                        <a class="button" href="{{ page.nextSibling.url }}"><i class="fa fa-chevron-left fa-fw"></i> Sledeći članak</a>
                     </li>
                 {% endif %}
                 {% if not page.isLast %}
                     <li class="next">
-                        <a class="button" href="{{ page.prevSibling.url }}">Претходна Статија <i class="fa fa-chevron-right fa-fw"></i></a>
+                        <a class="button" href="{{ page.prevSibling.url }}">Prethodni članak <i class="fa fa-chevron-right fa-fw"></i></a>
                     </li>
                 {% endif %}
             </ul>
